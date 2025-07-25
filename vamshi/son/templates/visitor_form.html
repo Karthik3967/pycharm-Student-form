@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+{% csrf_token %}
+<div>
+<label>Name:</label>
+<input type="text" name="name" value="{{ visitor.name | default:''}}">
+</div>
+<div>
+    <label>Email:</label>
+    <input type="text" name="email" value="{{ visitor.email | default:''}}">
+</div>
+<div>
+    <label>PhoneNo:</label>
+    <input type="text" name="phone" value="{{ visitor.phone | default:''}}">
+</div>
+<div>
+    <label>purpose:</label>
+    <textarea name="purpose">{{ visitor.purpose | default:''}}</textarea>
+</div>
+<div>
+    <button  type="submit">Submit</button>
+</div>
+</body>
+</html>

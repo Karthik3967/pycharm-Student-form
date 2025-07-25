@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list </title>
+
+</head>
+<body>
+  {% for visitor in visitors %}
+  <div>
+    name: {{ visitor.name }}
+    email: {{ visitor.email }}
+    phone: {{ visitor.phone }}
+    purpose: {{ visitor.purpose }}
+  </div>
+  {% endfor %}
+<div>  NO visitor</div>
+{% endfor %}
+
+</body>
+</html>
